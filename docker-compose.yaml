@@ -6,7 +6,7 @@ services:
       - data:/data/db
     env_file:
       - ./env/mongo.env
- 
+
   backend:
     build: ./backend
     ports:
@@ -19,7 +19,7 @@ services:
       - ./env/backend.env
     depends_on:
       - mongodb
- 
+
   frontend:
     build: ./frontend
     ports:
@@ -33,5 +33,5 @@ services:
 volumes:
   data:
   logs:
-  
+
 
